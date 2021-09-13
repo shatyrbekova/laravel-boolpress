@@ -21,6 +21,14 @@
     </div>
 </div>
 @foreach ($allPosts as $post)
-    <h2> {{$post->title}} </h2>
+    <div class="container">
+        <h2> {{$post->title}} </h2>
+        <h3> {{$post->author}} </h3>
+        <p>{{$post->title}} </p>
+        <img src="{{$post->cover}}" alt="">
+
+
+    </div>
+   
 @endforeach
 @endsection

@@ -18,6 +18,7 @@ class PostsTableSeder extends Seeder
            $postObject -> title = $faker->sentence(5);
            $postObject-> content =$faker->text();
            $postObject->author=$faker->text(50);
+           $postObject->cover = $faker->imageUrl(640, 480, 'books', true);
            $postObject-> save(); 
         }
     }
