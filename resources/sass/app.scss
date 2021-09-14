@@ -11,7 +11,20 @@
 
 .posts-container{
     background-color: #fff;
+   
     table{
+
+        border: 2px solid black;
+        thead{
+            background-color: yellow;
+            font-size: 20px;
+            color:red;
+            text-align: center;
+           
+        }
+        .id{
+            background-color: yellow;
+        }
         img{
             width:150px;
         }

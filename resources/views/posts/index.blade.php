@@ -8,19 +8,19 @@
     <table class="table">
     <thead>
         <tr>
-        <th scope="col">#</th>
-        <th scope="col">title</th>
-        <th scope="col">content</th>
-        <th scope="col">author</th>
-        <th scope="col">cover</th>
-        <th scope="col">actions</th>
+        <th scope="col" >#</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">CONTENT</th>
+        <th scope="col">AUTHOR</th>
+        <th scope="col">COVER</th>
+        <th scope="col">ACTIONS</th>
        
         </tr>
     </thead>
     <tbody>
         @foreach($allPosts as $post)
             <tr>
-                <th scope="row">{{$post->id}}</th>
+                <th scope="row" class="id">{{$post->id}}</th>
                 <td>{{$post->title}}</td>
                 <td>{{$post->content}}</td>
                 <td>{{$post->author}}</td>
