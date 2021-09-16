@@ -39,7 +39,7 @@
             <input type="submit" value="Salva" class="form-control">
             </div>
         </form>
-       
+       <h3>Riorna alla  lista <a href="{{route('posts.index')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
 
     </div>
 

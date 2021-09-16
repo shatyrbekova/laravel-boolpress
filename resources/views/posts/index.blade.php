@@ -4,7 +4,7 @@
 
 
 <div class="container posts-container">
-   <h3>Aggiungi un nuovo post <a href=""><i class="bi bi-plus-square"></i></a></h3>
+   <h3>Aggiungi un nuovo post <a href="{{route('posts.create')}}"><i class="bi bi-plus-square"></i></a></h3>
     <table class="table">
     <thead>
         <tr>
@@ -32,6 +32,7 @@
         @endforeach
     </tbody>
     </table>
+    
 </div>
      
 
