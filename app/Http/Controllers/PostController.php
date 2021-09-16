@@ -29,6 +29,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('posts.create');
     }
 
     /**
@@ -40,6 +41,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+    $request->validate(['cover'=>'url']);
+     $data =$request->all();
+
+     $allPosts = new Post();
+     $allPosts ->title =$data['title'];
+     $allPosts ->content =$data['content'];
+     $allPosts ->author =$data['author'];
+     $allPosts ->cover =$data['cover'];
+     $allPosts->save();
+     return redirect()->route('posts.show', $allPosts->id);
     }
 
     /**
