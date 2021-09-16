@@ -42,6 +42,8 @@ class PostController extends Controller
     {
         //
     $request->validate(['cover'=>'url']);
+    $request->validate(['title'=>'required|unique:posts|max:255']);
+    $request->validate(['content'=>'required']);
      $data =$request->all();
 
      $allPosts = new Post();

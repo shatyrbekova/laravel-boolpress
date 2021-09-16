@@ -4,7 +4,7 @@
 
 
 <div class="container posts-container">
-   <table>
+   <table class="w-100">
       <thead>
          <tr>
          <th scope="col">#</th>
@@ -31,7 +31,7 @@
   </tbody>
   </table>
   <br>
-     <h3>Ritorna al forum <a href="{{route('posts.create')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
+  <h3>Ritorna al forum <a href="{{route('posts.create')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
   <h3>Riorna alla  lista <a href="{{route('posts.index')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
 
   
@@ -41,3 +41,4 @@
      
 
 @endsection
+
