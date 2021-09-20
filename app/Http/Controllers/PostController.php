@@ -47,13 +47,14 @@ class PostController extends Controller
 
      $data =$request->all();
 
-     $allPosts = new Post();
-     $allPosts ->title =$data['title'];
-     $allPosts ->content =$data['content'];
-     $allPosts ->author =$data['author'];
-     $allPosts ->cover =$data['cover'];
-     $allPosts->save();
-     return redirect()->route('posts.show', $allPosts->id);
+     $post = new Post();
+    //  $allPosts ->title =$data['title'];
+    //  $allPosts ->content =$data['content'];
+    //  $allPosts ->author =$data['author'];
+    //  $allPosts ->cover =$data['cover'];
+    //  $allPosts->save();
+    $this->fillAndSavePost($post, $data);
+     return redirect()->route('posts.show', $post->id);
     }
 
     /**
@@ -94,7 +95,11 @@ class PostController extends Controller
     {
         //
         $data =$request -> all();
-        $post->update($data);
+       
+        // $post->update($data);
+        $post-> fill($data);
+
+       $this->fillAndSavePost($post, $data);
         return redirect()->route('posts.show', $post);
         
         
@@ -110,5 +115,12 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+    private function fillAndSavePost(Post $post, $data){
+
+        $post->title = $data['title'];
+        $post->content = $data['content'];
+        $post->author = $data['author'];
+        $post->cover=$data['cover'];
     }
 }
