@@ -26,7 +26,26 @@
                 <td>{{$post->author}}</td>
                 <td><img src="{{$post->cover}}" alt="picture of {{$post->title}}" /></td>
               
-                <td><a href="{{ route('posts.show', $post) }}"><i class="bi bi-zoom-in"></i></a></td>
+                <td>
+                    <a href="{{ route('posts.show', $post) }}">
+                        <button class="btn btn-warning">
+                            <i class="bi bi-zoom-in">
+                        </button>
+                    </a>
+
+                    <a href="{{ route('posts.edit', $post) }}">
+                    <button  class="btn btn-success">
+                        <i class="bi bi-pencil-square">
+                    </button>
+                    </a>
+                    
+                   <form action="{{ route('posts.destroy', $post) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                      
+                   </form>
+               </td>
                 
             </tr>
         @endforeach
