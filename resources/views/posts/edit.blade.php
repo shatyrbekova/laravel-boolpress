@@ -4,6 +4,7 @@
     @section('content')
     
     <div class="container">
+        <h1>Modifica il post</h1>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -42,7 +43,7 @@
             <input type="submit" value="Salva" class="form-control">
             </div>
         </form>
-       <h3>Riorna alla  lista <a href="{{route('posts.index')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
+       <h3>Ritorna alla  lista <a href="{{route('posts.index')}}"><i class="bi bi-arrow-left-circle"></i></a></h3>
 
     </div>
 

@@ -29,13 +29,13 @@
                 <td>
                     <a href="{{ route('posts.show', $post) }}">
                         <button class="btn btn-warning">
-                            <i class="bi bi-zoom-in">
+                            <i class="bi bi-zoom-in"></i>
                         </button>
                     </a>
 
                     <a href="{{ route('posts.edit', $post) }}">
                     <button  class="btn btn-success">
-                        <i class="bi bi-pencil-square">
+                        <i class="bi bi-pencil-square"></i>
                     </button>
                     </a>
                     
