@@ -46,7 +46,7 @@ class PostsTableSeder extends Seeder
            $categoryID=  $listofCategoryID[$randomCategoryKey];
            $postObject->category_id=$categoryID;
 
-        //    $postObject->author_detail_id=$authorDetail->id;
+           $postObject->author_detail_id=$authorDetail->id;
 
            $postObject-> save(); 
         }

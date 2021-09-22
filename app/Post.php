@@ -14,4 +14,8 @@ protected $fillable =[
     'author',
     'cover'
 ];
+//belongs to dove abbiamo FK
+public function authorDetail(){
+    return $this->belongsTo((AuthorDetail::class));
+}
 }
